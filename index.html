@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>鹈鹕骑单车</title>
+<title>鹈鹕海边骑单车</title>
 <style>
-  html,body{margin:0;height:100%;background:#bfe9ff;overflow:hidden;font-family:sans-serif}
+  html,body{margin:0;height:100%;background:#8fd8ff;overflow:hidden;font-family:sans-serif}
   svg{width:100%;height:100%;display:block}
   .wheel{animation:spin 1s linear infinite;transform-box:fill-box;transform-origin:center}
   .crank{animation:spin 1s linear infinite;transform-box:fill-box;transform-origin:center}
@@ -44,20 +44,41 @@
     <ellipse cx="0" cy="140" rx="60" ry="18"/><ellipse cx="-20" cy="128" rx="30" ry="16"/>
   </g>
 
-  <!-- far hills -->
-  <g class="scroll2" fill="#8fd18f">
-    <path d="M0 340 Q100 250 200 340 T400 340 T600 340 T800 340 T1000 340 T1200 340 V450 H0Z"/>
+  <!-- sea -->
+  <rect y="250" width="800" height="110" fill="#2e9fd8"/>
+  <rect y="250" width="800" height="14" fill="#7fd0f0"/>
+  <g class="scroll1" stroke="#fff" stroke-width="3" fill="none" opacity=".8" stroke-linecap="round">
+    <g id="waves"><path d="M20 285 q10 -8 20 0 t20 0"/><path d="M180 305 q10 -8 20 0 t20 0"/><path d="M300 280 q10 -8 20 0 t20 0"/><path d="M90 340 q10 -8 20 0 t20 0"/><path d="M260 335 q10 -8 20 0 t20 0"/></g>
+    <use href="#waves" x="400"/><use href="#waves" x="800"/><use href="#waves" x="1200"/>
   </g>
-  <!-- ground -->
-  <rect y="372" width="800" height="80" fill="#6bbf59"/>
-  <rect y="388" width="800" height="62" fill="#8a8a8a"/>
-  <g class="ground" stroke="#fff" stroke-width="4" stroke-dasharray="40 40">
-    <line x1="0" y1="420" x2="1300" y2="420"/>
+  <!-- sailboat -->
+  <g class="cloud" style="animation-duration:60s">
+    <path d="M0 262 H50 L42 276 H8Z" fill="#8a5a2b"/><rect x="24" y="222" width="3" height="40" fill="#555"/>
+    <path d="M27 224 L27 258 L48 258Z" fill="#fff"/><path d="M23 230 L23 258 L8 258Z" fill="#ffd0d0"/>
   </g>
-  <g class="scroll1" fill="#4a9a3a">
-    <g id="tree"><rect x="60" y="335" width="8" height="40" fill="#6b4a2b"/><circle cx="64" cy="325" r="22"/></g>
-    <use href="#tree" x="200"/><use href="#tree" x="400"/><use href="#tree" x="600"/>
-    <use href="#tree" x="800"/><use href="#tree" x="1000"/>
+  <!-- beach sand -->
+  <path d="M0 345 Q200 325 400 345 T800 345 V450 H0Z" fill="#f4d58d"/>
+  <rect y="372" width="800" height="80" fill="#f4d58d"/>
+  <g class="scroll1" fill="none" stroke="#fff" stroke-width="5" opacity=".7" stroke-linecap="round">
+    <path d="M0 352 q50 -10 100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0"/>
+  </g>
+  <!-- boardwalk road -->
+  <rect y="388" width="800" height="62" fill="#c9a26b"/>
+  <g class="ground" stroke="#a07a45" stroke-width="3" stroke-dasharray="3 37">
+    <line x1="0" y1="395" x2="1300" y2="395" stroke-width="12"/>
+    <line x1="0" y1="420" x2="1300" y2="420" stroke-width="12"/>
+    <line x1="0" y1="445" x2="1300" y2="445" stroke-width="12"/>
+  </g>
+  <!-- palm trees, umbrellas -->
+  <g class="scroll1">
+    <g id="palm">
+      <path d="M62 375 Q70 340 64 312" stroke="#8a5a2b" stroke-width="8" fill="none" stroke-linecap="round"/>
+      <g fill="#2e9a4a"><ellipse cx="42" cy="312" rx="26" ry="7" transform="rotate(-25 42 312)"/><ellipse cx="86" cy="312" rx="26" ry="7" transform="rotate(25 86 312)"/>
+      <ellipse cx="64" cy="302" rx="8" ry="24"/><ellipse cx="46" cy="324" rx="22" ry="6" transform="rotate(25 46 324)"/><ellipse cx="82" cy="324" rx="22" ry="6" transform="rotate(-25 82 324)"/></g>
+    </g>
+    <g id="umb"><rect x="161" y="345" width="3" height="30" fill="#555"/><path d="M135 347 Q162 318 190 347Z" fill="#ff5a5a"/></g>
+    <use href="#palm" x="400"/><use href="#umb" x="400"/><use href="#palm" x="800"/><use href="#umb" x="800"/>
+    <use href="#palm" x="1200"/>
   </g>
 
   <!-- pelican + bike -->
